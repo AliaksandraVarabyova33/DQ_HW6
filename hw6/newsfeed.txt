@@ -1,0 +1,19 @@
+News:
+This is a news text 2
+Athens, 2024-09-18
+--------------------
+
+PrivateAd:
+This is a private add text 2
+Actual till: 2024-12-15, days left: 88
+--------------------
+
+Weather Forecast:
+Today the following weather is expected:
+Rainy: False
+Windy: True
+Sunny: False
+Weather rating: 3
+Oslo, 2024-09-18
+--------------------
+

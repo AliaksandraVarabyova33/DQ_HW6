@@ -1,0 +1,13 @@
+1
+tesT news Text
+Oslo
++++
+2
+Ad text
+2024-12-21
++++
+3
+true
+False
+falsE
+Minsk
