@@ -17,3 +17,23 @@ Weather rating: 3
 Oslo, 2024-09-18
 --------------------
 
+News:
+Very fat cat was found in the forest
+Rome, 2024-09-26
+--------------------
+
+News:
+Another fat cat was found
+Paris, 2024-09-26
+--------------------
+
+News:
+Two more fat cats are found
+Berlin, 2024-09-26
+--------------------
+
+News:
+test
+Zagreb, 2024-09-26
+--------------------
+
