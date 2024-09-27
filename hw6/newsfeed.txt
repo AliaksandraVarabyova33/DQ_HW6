@@ -37,3 +37,70 @@ test
 Zagreb, 2024-09-26
 --------------------
 
+News:
+Test news text
+Oslo, 2024-09-27
+--------------------
+
+News:
+Test news text
+Oslo, 2024-09-27
+--------------------
+
+PrivateAd:
+Ad text
+Actual till: 2024-12-21, days left: 85
+--------------------
+
+Weather Forecast:
+Today the following weather is expected:
+Rainy: True
+Windy: False
+Sunny: False
+Weather rating: 2
+Minsk, 2024-09-27
+--------------------
+
+News:
+Test
+Vitebsk, 2024-09-27
+--------------------
+
+News:
+Test news text
+Oslo, 2024-09-27
+--------------------
+
+PrivateAd:
+Ad text
+Actual till: 2024-12-21, days left: 85
+--------------------
+
+Weather Forecast:
+Today the following weather is expected:
+Rainy: True
+Windy: False
+Sunny: False
+Weather rating: 2
+Minsk, 2024-09-27
+--------------------
+
+News:
+News added from json
+Nevel, 2024-09-27
+--------------------
+
+PrivateAd:
+PrivateAd added from json
+Actual till: 2024-11-21, days left: 55
+--------------------
+
+Weather Forecast:
+Today the following weather is expected:
+Rainy: False
+Windy: True
+Sunny: False
+Weather rating: 3
+Lima, 2024-09-27
+--------------------
+

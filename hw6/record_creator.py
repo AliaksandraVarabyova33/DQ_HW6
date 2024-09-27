@@ -1,3 +1,4 @@
+
 from hw6.records import News, PrivateAd, WeatherForecast
 from hw6.user_input import UserInput
 from datetime import date
@@ -27,4 +28,19 @@ class RecordCreator:
                 records.append(PrivateAd(i[1], date(year,month,day )))
             else:
                 records.append(WeatherForecast(i[1], i[2], i[3], i[4]))
+        return records
+
+    @staticmethod
+    def create_records_from_json_file(json_file_reader):
+        records_from_file = json_file_reader.read_records()
+        parameters = json_file_reader.read_parameters(records_from_file )
+        records = []
+        for i in parameters:
+            if int(i["type"]) == 1:
+                records.append(News(i["text"], i["city"]))
+            elif int(i["type"]) == 2:
+                year, month, day = map(int, i["expiration_date"].split('-'))
+                records.append(PrivateAd(i["text"], date(year, month, day)))
+            else:
+                records.append(WeatherForecast(str(i["is_rainy"]), str(i["is_windy"]), str(i["is_sunny"]), i["city"]))
         return records

@@ -1,0 +1,21 @@
+{
+  "records": [
+    {
+      "type": 1,
+      "text": "News added from json",
+      "city": "Nevel"
+    },
+    {
+      "type": 2,
+      "text": "PrivateAd added from json",
+      "expiration_date": "2024-11-21"
+    },
+    {
+      "type": 3,
+      "is_rainy": false,
+      "is_windy": false,
+      "is_sunny": true,
+      "city": "Lima"
+    }
+  ]
+}
