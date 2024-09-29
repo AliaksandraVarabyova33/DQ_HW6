@@ -24,6 +24,6 @@ class UserInput:
     def weather_parameters_input():
         weather_parameters = []
         weather_parameters.append(input("It's rainy: enter true or false?"))
-        weather_parameters.append(input("It's sunny: enter or false?"))
         weather_parameters.append(input("It's windy: enter or false?"))
+        weather_parameters.append(input("It's sunny: enter or false?"))
         return weather_parameters

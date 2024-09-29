@@ -1,0 +1,11 @@
+<records>
+    <News type="1" city="Madrid">News Text from XML</News>
+    <PrivateAd type="2" expiration_date="2024-11-21">PrivateAd text from XML</PrivateAd>
+    <WeatherFrecast type="3" city="Berlin">
+        <is_rainy>False</is_rainy>
+        <is_windy>False</is_windy>
+        <is_sunny>True</is_sunny>
+    </WeatherFrecast>
+</records>
+
+

@@ -2,6 +2,7 @@
 from hw6.records import News, PrivateAd, WeatherForecast
 from hw6.user_input import UserInput
 from datetime import date
+import xml.etree.ElementTree as ET
 
 
 class RecordCreator:
@@ -44,3 +45,29 @@ class RecordCreator:
             else:
                 records.append(WeatherForecast(str(i["is_rainy"]), str(i["is_windy"]), str(i["is_sunny"]), i["city"]))
         return records
+
+    @staticmethod
+    def create_records_from_xml_file(xml_file_reader):
+        xml_file = xml_file_reader.read_records()
+        root = xml_file.getroot()
+        records = []
+        for element in root:
+            if int(element.get('type')) == 1:
+                records.append(News(element.text, element.get('city')))
+            elif int(element.get('type')) == 2:
+                year, month, day = map(int, element.get('expiration_date').split('-'))
+                records.append(PrivateAd(element.text, date(year, month, day)))
+            else:
+                is_rainy = "not_defined"
+                is_windy = "not_defined"
+                is_sunny = "not_defined"
+                for sub_element in element:
+                    if sub_element.tag == 'is_rainy':
+                        is_rainy = sub_element.text
+                    elif sub_element.tag == 'is_windy':
+                        is_windy = sub_element.text
+                    else:
+                        is_sunny = sub_element.text
+                records.append(WeatherForecast(is_rainy, is_windy, is_sunny, element.get('city')))
+        return records
+

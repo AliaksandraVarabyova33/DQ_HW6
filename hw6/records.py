@@ -21,7 +21,7 @@ class PrivateAd(Record):
 
 
 class WeatherForecast(Record):
-    def __init__(self, is_rainy, is_sunny, is_windy, city):
+    def __init__(self, is_rainy, is_windy, is_sunny, city):
         super().__init__("Today the following weather is expected:\nRainy: " + is_rainy + "\nWindy: " + is_windy + "\nSunny: " + is_sunny)
         self.city = city
         self.dt = date.today()

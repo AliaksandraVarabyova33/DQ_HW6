@@ -104,3 +104,98 @@ Weather rating: 3
 Lima, 2024-09-27
 --------------------
 
+News:
+News added from json
+Nevel, 2024-09-29
+--------------------
+
+PrivateAd:
+PrivateAd added from json
+Actual till: 2024-11-21, days left: 53
+--------------------
+
+Weather Forecast:
+Today the following weather is expected:
+Rainy: False
+Windy: True
+Sunny: False
+Weather rating: 3
+Rome, 2024-09-29
+--------------------
+
+News:
+News Text from XML
+Madrid, 2024-09-29
+--------------------
+
+PrivateAd:
+PrivateAd text from XML
+Actual till: 2024-11-21, days left: 53
+--------------------
+
+Weather Forecast:
+Today the following weather is expected:
+Rainy: False
+Windy: True
+Sunny: False
+Weather rating: 3
+Berlin, 2024-09-29
+--------------------
+
+News:
+News Text from XML
+Madrid, 2024-09-29
+--------------------
+
+PrivateAd:
+PrivateAd text from XML
+Actual till: 2024-11-21, days left: 53
+--------------------
+
+Weather Forecast:
+Today the following weather is expected:
+Rainy: False
+Windy: False
+Sunny: False
+Weather rating: 5
+Berlin, 2024-09-29
+--------------------
+
+News:
+News added from json
+Nevel, 2024-09-29
+--------------------
+
+PrivateAd:
+PrivateAd added from json
+Actual till: 2024-11-21, days left: 53
+--------------------
+
+Weather Forecast:
+Today the following weather is expected:
+Rainy: False
+Windy: True
+Sunny: False
+Weather rating: 3
+Lima, 2024-09-29
+--------------------
+
+News:
+News Text from XML
+Oslo, 2024-09-29
+--------------------
+
+PrivateAd:
+PrivateAd text from XML
+Actual till: 2024-11-21, days left: 53
+--------------------
+
+Weather Forecast:
+Today the following weather is expected:
+Rainy: False
+Windy: False
+Sunny: True
+Weather rating: 6
+Minsk, 2024-09-29
+--------------------
+

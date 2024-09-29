@@ -1,10 +1,10 @@
-import os
 import json
+from hw6.file_reader import FileReader
 
-class JsonFileReader:
+
+class JsonFileReader(FileReader):
     def __init__(self, path="records.json"):
-        self.file = open(path, "r")
-        self.path = path
+        super().__init__(path)
 
     def read_records(self):
         records_as_a_dict = json.load(self.file)
@@ -18,8 +18,3 @@ class JsonFileReader:
             for j in i:
                 parameters.append(j)
         return parameters
-
-    def remove_file(self):
-        if os.path.exists(self.path):
-            os.remove(self.path)
-            print(f"File '{self.path}' deleted successfully.")
