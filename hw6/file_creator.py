@@ -1,3 +1,4 @@
+from hw6.db_save import DBSave
 from hw6.file_reader import FileReader
 from hw6.json_file_reader import JsonFileReader
 from hw6.record_creator import RecordCreator
@@ -26,12 +27,16 @@ class FileCreator:
         file_parser.close_file()
 
     def add_record_to_file(self, record):
-        if record.__class__.__name__ == "News":
-            self.file.write("News:\n" + record.text + "\n" +record.city + ", " + str(record.dt) + "\n--------------------\n\n")
-        elif record.__class__.__name__ == "PrivateAd":
-            self.file.write("PrivateAd:\n" + record.text + "\n" + "Actual till: " + str(record.expiration_date) + ", days left: " + str(record.days_left) + "\n--------------------\n\n")
-        else:
-            self.file.write("Weather Forecast:\n" + record.text + "\n" + "Weather rating: " + str(record.weather_rating) + "\n" + record.city + ", " + str(record.dt) + "\n--------------------\n\n")
+        with DBSave() as db:
+            if record.__class__.__name__ == "News":
+                self.file.write("News:\n" + record.text + "\n" +record.city + ", " + str(record.dt) + "\n--------------------\n\n")
+                db.insert_record('news', text = record.text, city = record.city, date=str(record.dt))
+            elif record.__class__.__name__ == "PrivateAd":
+                self.file.write("PrivateAd:\n" + record.text + "\n" + "Actual till: " + str(record.expiration_date) + ", days left: " + str(record.days_left) + "\n--------------------\n\n")
+                db.insert_record('ads', text=record.text, exp_date=str(record.expiration_date))
+            else:
+                self.file.write("Weather Forecast:\n" + record.text + "\n" + "Weather rating: " + str(record.weather_rating) + "\n" + record.city + ", " + str(record.dt) + "\n--------------------\n\n")
+                db.insert_record('forecasts', text=record.text, rating = str(record.weather_rating), city = record.city, date = str(record.dt))
 
     def add_records_to_file(self, records):
         for record in records:
